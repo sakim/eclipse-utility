@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Open External Plug-in
+Bundle-SymbolicName: kr.pragmatic.openexternal;singleton:=true
+Bundle-Version: 0.7.0
+Bundle-Activator: kr.pragmatic.openexternal.OpenExternalPlugin
+Bundle-Vendor: Pragmatic.kr
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.core.resources;bundle-version="3.4.1"
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-ActivationPolicy: lazy

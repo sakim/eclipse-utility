@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            adaptable="true"
+            id="kr.pragmatic.openexternal.objectContribution.mac"
+            objectClass="kr.pragmatic.openexternal.models.IntermediateResource">
+         <action
+               class="kr.pragmatic.openexternal.actions.OpenTerminalAction"
+               icon="icons/etool16/terminal_exec.gif"
+               id="kr.pragmatic.openexternal.action.mac.terminal"
+               label="Terminal"
+               menubarPath="kr.pragmatic.openexternal.menu/additions">
+         </action>
+         <action
+               class="kr.pragmatic.openexternal.actions.OpenFinderAction"
+               icon="icons/etool16/finder_exec.gif"
+               id="kr.pragmatic.openexternal.action.mac.finder"
+               label="Finder"
+               menubarPath="kr.pragmatic.openexternal.menu/additions">
+         </action>
+         <visibility>
+            <objectState
+                  name="platform"
+                  value="macosx">
+            </objectState>
+         </visibility>
+      </objectContribution>
+      <objectContribution
+            adaptable="true"
+            id="kr.pragmatic.openexternal.objectContribution.windows"
+            objectClass="kr.pragmatic.openexternal.models.IntermediateResource">
+         <action
+               class="kr.pragmatic.openexternal.actions.OpenPromptAction"
+               icon="icons/etool16/prompt_exec.png"
+               id="kr.pragmatic.openexternal.action.windows.prompt"
+               label="Command Prompt"
+               menubarPath="kr.pragmatic.openexternal.menu/additions">
+         </action>
+         <action
+               class="kr.pragmatic.openexternal.actions.OpenExplorerAction"
+               icon="icons/etool16/explorer_exec.png"
+               id="kr.pragmatic.openexternal.action.windows.explorer"
+               label="Windows Explorer"
+               menubarPath="kr.pragmatic.openexternal.menu/additions">
+         </action>
+         <visibility>
+            <objectState
+                  name="platform"
+                  value="win32">
+            </objectState>
+         </visibility>
+      </objectContribution>
+      <objectContribution
+            adaptable="true"
+            id="kr.pragmatic.openexternal.objectContribution.menu"
+            objectClass="org.eclipse.core.resources.IResource">
+         <menu
+               id="kr.pragmatic.openexternal.menu"
+               label="Open External"
+               path="additions">
+         </menu>
+      </objectContribution>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.adapters">
+      <factory
+            adaptableType="org.eclipse.core.runtime.IAdaptable"
+            class="kr.pragmatic.openexternal.adapters.ResourceAdapterFactory">
+         <adapter
+               type="kr.pragmatic.openexternal.models.IntermediateResource" />
+      </factory>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="kr.pragmatic.openexternal.preferences.OpenExternalPreferencePage"
+            id="kr.pragmatic.openexternal.preference"
+            name="Open External">
+      </page>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="kr.pragmatic.openexternal.preferences.PreferenceInitializer">
+      </initializer>
+   </extension>
+
+</plugin>

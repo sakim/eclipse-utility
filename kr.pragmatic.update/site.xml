@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/kr.pragmatic.history.feature_1.0.1.jar" id="kr.pragmatic.history.feature" version="1.0.1">
+      <category name="kr.pragmatic.category.history"/>
+   </feature>
+   <feature url="features/kr.pragmatic.openexternal.feature_0.8.0.20091210.jar" id="kr.pragmatic.openexternal.feature" version="0.8.0.20091210">
+      <category name="kr.pragmatic.category.openexternal"/>
+   </feature>
+   <feature url="features/kr.pragmatic.compare.ui.feature_0.7.0.20091210.jar" id="kr.pragmatic.compare.ui.feature" version="0.7.0.20091210">
+      <category name="kr.pragmatic.category.compare"/>
+   </feature>
+   <category-def name="kr.pragmatic.category.history" label="Multi-File History">
+      <description>
+         Multi-File History Feature
+      </description>
+   </category-def>
+   <category-def name="kr.pragmatic.category.openexternal" label="Open External">
+      <description>
+         Open External Feature
+      </description>
+   </category-def>
+   <category-def name="kr.pragmatic.category.compare" label="Smart Compare">
+      <description>
+         Smart Compare Feature
+      </description>
+   </category-def>
+</site>

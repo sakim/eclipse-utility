@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Smart Compare
+Bundle-SymbolicName: kr.pragmatic.compare.ui;singleton:=true
+Bundle-Version: 0.7.0.20091210
+Bundle-Vendor: Pragmatic.kr
+Bundle-Localization: fragment
+Fragment-Host: org.eclipse.team.ui;bundle-version="3.3.0"
+Bundle-RequiredExecutionEnvironment: J2SE-1.5

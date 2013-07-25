@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<fragment>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            adaptable="true"
+            id="kr.pragmatic.history.objectContribution"
+            objectClass="org.eclipse.core.resources.IResource">
+         <action
+               class="kr.pragmatic.history.internal.ui.actions.ShowLocalHistoryAction"
+               enablesFor="*"
+               id="kr.pragmatic.team.ui.showLocalHistory"
+               label="%ShowMultiLocalHistory.label"
+               menubarPath="team.main/group4"
+               overrideActionId="org.eclipse.team.ui.showLocalHistory"
+               tooltip="%ShowMultiLocalHistory.tooltip">
+         </action>
+      </objectContribution>
+   </extension>
+</fragment>
